@@ -1,176 +1,170 @@
-* {
-  font-family: "Work Sans", sans-serif;
-}
-/*=====================  RESET STYLES  ========================*/
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-bg: #000;
+  --color-bg-variant: rgb(255, 255, 255,0.1);
+  --color-primary: #25AB75;
+  --color-primary-variant: rgb(37, 171, 117, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.5);
+
+  --transition:  all 400ms ease;
+
+  --container-width-lg: 85%;
+  --container-width-md: 90%;
+  --container-width-sm: 97%;
+}
 html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  line-height: 1;
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+}
+/* =========== HEADER STYLES =========== */
+
+.container {
+  max-width: var(--container-width-lg);
+  margin: 0 auto;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
+h1, h2, h3, h4, h5 {
+  color: var(--color-bg);
+}
+h1 {
+  font-size: 7.5rem;
+  line-height: 7.5rem;
+  font-weight: 600;
+  letter-spacing: -2px;
+}
+h2 {
+  font-size: 3.125rem;
+  line-height: 2.813rem;
+  font-weight: 600;
+  letter-spacing: 0.019rem;
+}
+h2.light {
+  line-height: 4.375rem;
+  font-weight: 400;
+  letter-spacing: 0.052rem;
+}
+h3{
+  font-size: 2.188rem;
+  line-height: 2.813rem;
+  font-weight: 600;
+  letter-spacing: 0.019rem;
+}
+h4 {
+  font-size: 1.563rem;
+  line-height: 2.188rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.34);
+}
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.563rem;
+  font-weight: 500;
+  letter-spacing: 0.031rem;
+}
+h6 {
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.031rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 section {
-  display: block;
+  margin-top: 8rem;
 }
 
-nav ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
+.text-light {
+  color: var(--color-light);
 }
 
 a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  text-decoration: none;
+  color: var(--color-white);
+  transition: var(--transition);
 }
 
-/* change colours to suit your needs */
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
+a:hover {
+  color: var(--color-light);
 }
 
-/* change colours to suit your needs */
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
+.btn {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 1.5rem 2.688rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
+  width: max-content;
+}
+.btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary-variant);
+  border-color: transparent;
 }
 
-del {
-  text-decoration: line-through;
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+.btn-primary:hover {
+  background: var(--color-primary-variant);
+  color: var(--color-white);
+}
+.btn-dark {
+  background: var(--color-bg-variant);
+  color: var(--color-white);
+  border-color: var(--color-bg-variant);
+}
+.btn-dark:hover {
+  background: var(--color-bg);
+  color: var(--color-white);
+  border-color: var(--color-bg-variant);
 }
 
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* change border colour to suit your needs */
-hr {
+img {
   display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-input,
-select {
-  vertical-align: middle;
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: var(--color-primary);
 }
 
-/*=====================  RESET STYLES  ========================*/
+/* ============================ MEDIA QUERIES (MEDIUM DEVICES) ===================================== */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+  section {
+    margin-top: 6rem;
+  }
+}
+
+/* ============================ MEDIA QUERIES (SMALL DEVICES) ===================================== */
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+  section > h2 {
+    margin-bottom: 2rem;
+  }
+}
