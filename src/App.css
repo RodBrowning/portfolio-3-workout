@@ -8,10 +8,12 @@
   --color-primary-variant: rgb(37, 171, 117, 0.4);
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.5);
+  --color-red: #FB1351;
+  --color-yellow: #FFE642;
 
   --transition:  all 400ms ease;
 
-  --container-width-lg: 80%;
+  --container-width-lg: 1200px;
   --container-width-md: 90%;
   --container-width-sm: 97%;
 }
@@ -33,53 +35,69 @@ body {
 
 .container {
   max-width: var(--container-width-lg);
+  width: 90%;
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6, p {
   color: var(--color-white);
+  font-family: 'Poppins', sans-serif;
 }
-h1 {
+.text-size-1 {
   font-size: 7.5rem;
   line-height: 7.5rem;
   font-weight: 600;
   letter-spacing: -2px;
 }
-h2 {
+.text-size-2 {
   font-size: 3.125rem;
   line-height: 2.813rem;
   font-weight: 600;
   letter-spacing: 0.019rem;
 }
-h2.light {
+.text-size-2.light {
   line-height: 4.375rem;
   font-weight: 400;
   letter-spacing: 0.052rem;
 }
-h3{
+.text-size-3{
   font-size: 2.188rem;
   line-height: 2.813rem;
   font-weight: 600;
   letter-spacing: 0.019rem;
 }
-h4 {
+.text-size-4 {
   font-size: 1.563rem;
   line-height: 2.188rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.34);
 }
-h5 {
+.text-size-5 {
   font-size: 1.25rem;
   line-height: 1.563rem;
   font-weight: 500;
   letter-spacing: 0.031rem;
 }
-h6 {
-  font-size: 0.875rem;
-  line-height: 0.875rem;
-  font-weight: 400;
-  letter-spacing: 0.031rem;
+.text-size-6 {
   color: rgba(255, 255, 255, 0.5);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.031rem;
+  
+}
+span.span-pill {
+  color: white;
+  letter-spacing: 0.094rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.625rem;
+  padding-block: 0.25rem;
+  padding-inline: 0.625rem;
+  background-color: var(--color-primary);
+  border-radius: 200px;
+
 }
 
 section {
@@ -100,6 +118,7 @@ a:hover {
 }
 
 .btn {
+  font-family: 'Poppins', sans-serif;
   display: inline-block;
   color: var(--color-primary);
   font-size: 1.125rem;
@@ -143,6 +162,11 @@ a:hover {
   .container {
     width: var(--container-width-md);
   }
+  .btn {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
 }
 
 /* ============================ MEDIA QUERIES (SMALL DEVICES) ===================================== */
@@ -150,4 +174,5 @@ a:hover {
   .container {
     width: var(--container-width-sm);
   }
+  
 }

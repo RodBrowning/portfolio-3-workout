@@ -21,7 +21,6 @@
     line-height: 0.75rem;
     font-weight: 400;
     letter-spacing: 0.094rem;
-
 }
 .header__nav-button {
     display: none;
@@ -48,6 +47,7 @@
         border: 1px solid var(--color-light);
         background: var(--color-bg);
         padding: 1rem 1.5rem;
+        z-index: 1;
     }
     .header__container .hide {
         display: none;
