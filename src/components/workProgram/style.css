@@ -1,0 +1,160 @@
+
+#work-program {
+    position: relative;
+    overflow: hidden;
+}
+
+#work-program .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 82px;
+    padding-top: 100px;
+    isolation: isolate;
+    position: relative;
+}
+
+#work-program .content .big-heading {
+    position: relative;
+    width: 80%;
+}
+
+#work-program .content .big-heading:before {
+    content: url(../../assets/group141.png);
+    position: absolute;
+    z-index: -1;
+    bottom: -115px;
+    left: -30px;
+}
+
+#work-program .call-to-action:before {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, .1);
+    inset: 0 -1000px -145px 320px;
+
+}
+
+#work-program .call-to-action p.text-size-4 {
+    font-weight: 400;
+    line-height: 3.125rem;
+    margin-top: 30px;
+}
+
+#work-program .call-to-action button {
+    margin-top: 50px;
+}
+
+#work-program .cards {
+    position: relative;
+    display: flex;
+    height: 100%;
+    gap: 0;
+    margin-top: 145px;
+}
+#work-program .cards .img-card img {
+    width: 100%;
+}
+
+#work-program .cards .left-images {
+    display: flex;
+}
+
+#work-program .cards .left-images .img-card:last-child {
+    margin-top: 320px;
+}
+#work-program .cards .right-images .img-card {
+    margin-top: -193px;
+}
+
+#work-program .cards .right-images .img-card .data .name {
+    margin-inline: 20px
+}
+
+@media screen and (min-width: 1440px) {
+
+}
+
+@media screen and (max-width: 1439px) {
+    #work-program .call-to-action:before {
+        inset: 0 -190px -145px 26.8%;
+
+    }
+    #work-program .cards .left-images .img-card:last-child {
+        margin-top: 50%;
+    }
+    #work-program .cards .right-images .img-card {
+        margin-top: -34.5%;
+    }
+}
+    
+@media screen and (max-width: 1024px) {
+    #work-program .content {
+        grid-template-columns: 1fr;
+    } 
+    #work-program .cards {
+        margin-top: 80px;
+    }
+
+    #work-program .content .big-heading h1 {
+        font-size: 5.5rem;
+        line-height: 6.5rem;
+    }
+
+    #work-program .content .big-heading:before {
+        bottom: -60px;
+    }
+
+    #work-program .call-to-action:before {
+        inset: 0 -190px -80px 26.8%;
+    }
+    #work-program .call-to-action button {
+        margin-top: 50px;
+    }   
+
+}
+    
+@media screen and (max-width: 768px) {
+
+}
+    
+@media screen and (max-width: 668px) {
+
+    #work-program .content .big-heading h1 {
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+
+    #work-program .content .big-heading:before {
+        bottom: -24%;
+        left: 130px;
+        transform: translateX(-50%) scale(.5);
+    }
+    
+
+}
+    
+@media screen and (max-width: 488px) {
+    #work-program {
+        overflow: hidden;
+        margin-top: 4rem;
+    }
+    #work-program .cards {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 55px;
+    }
+    #work-program .cards .left-images {
+        order: 2;
+    }
+    #work-program .cards .right-images .img-card {
+        margin-top: 0;
+    }
+    #work-program .call-to-action:before {
+        inset: 0 -190px -55px 50%;
+    }
+    #work-program .call-to-action p.text-size-4 { 
+        font-size: 1.25rem;
+        line-height: 1.963rem;
+    }
+
+}
