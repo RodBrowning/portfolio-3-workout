@@ -7,7 +7,7 @@ const Heading = () => {
   return (
     <header className='container header__container'>
       <div className='header__logo'>
-        <h2>
+        <h2 className='text-size-2'>
           WORKOUT
         </h2>
       </div>

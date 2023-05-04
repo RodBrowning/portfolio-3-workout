@@ -1,0 +1,129 @@
+
+section#exercises {
+    margin-top: 10rem;
+}
+
+#exercises .heading { 
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px
+}
+#exercises .heading h6 {
+    align-self: flex-end;
+} 
+
+#exercises .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 3.75rem;
+    justify-items: center;
+}
+#exercises .card {
+    width: 100%;
+}
+
+#exercises .card .img-box {
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+}
+#exercises .card .img-box:before {
+    content: '';
+    position: absolute;
+    inset: 70% 0 -1% 0;
+    background: linear-gradient(to bottom, transparent 15%, black);
+}
+#exercises .card .img-box img { 
+    width: 100%;
+}
+
+#exercises .card .img-box .timer {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    background: black;
+    padding: 10px;
+    border-radius: 17px;
+}
+#exercises .card .img-box .timer h5 {
+    line-height: 1.188rem;
+}
+
+#exercises .card-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-inline: 20px;
+    margin-top: -33px;
+}
+
+
+@media screen and (max-width: 1439px) {
+    #exercises .card-body {
+        gap: 10px;
+    }
+    .card-body .text-size-2{
+        font-size: 2.525rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    section#exercises {
+        margin-top: 10rem;
+    }
+    
+    #exercises .card-body {
+        gap: 5px;
+    }
+    #exercises .card-body .text-size-2 {
+        font-size: 1.5rem;
+    }
+    #exercises .cards {
+        column-gap: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    section#exercises {
+        margin-top: 0;
+    }
+    #exercises .heading .text-size-3 {
+        line-height: 2.188rem;
+    }
+    #exercises .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #exercises .cards {
+        column-gap: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 668px) {
+    section#exercises {
+        margin-top: 8rem;
+    }
+    #exercises .card-body {
+        gap: 15px;
+    }
+    #exercises .card-body .text-size-2{
+        font-size: 1.85rem;
+    }
+
+}
+
+@media screen and (max-width: 488px) {
+    #exercises .heading {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #exercises .heading h6.text-size-6 {
+        align-self: flex-start;
+    }
+    #exercises .cards {
+        grid-template-columns: 1fr;
+    }
+}
